@@ -7,7 +7,7 @@ pipeline{
 	stages {
 		stage('Build') {
 			steps {
-				sh 'docker build -t mdesai-nginx:latest .'
+				sh 'docker build -t mynginx1:latest .'
 			}
 		}
 		stage('Login') {
@@ -17,7 +17,7 @@ pipeline{
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push mdesai-nginx:latest'
+				sh 'docker push mynginx1:latest'
 			}
 		}
 	}
